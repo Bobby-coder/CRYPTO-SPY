@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;800&display=swap');
-
-:root{
-    --black: #000000;
-    --white: #ffffff;
-    --red: #E21717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * { 
   margin: 0;
@@ -23,10 +20,15 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--black);
+  background: var(#000000);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--red) ;
+  background-color: #ffffff ;
   border-radius: 6px;
+}
+
+body{
+  background-color: #101623;
+  color: #ffffff;
 }

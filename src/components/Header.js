@@ -1,13 +1,17 @@
+import { CryptoState } from "./ContextProvider";
+
 const Header = () => {
+  const { currency, setCurrency } = CryptoState();
+
   return (
     <>
-      <div className="h-14 bg-gray-80 px-5% flex items-center justify-between">
+      <div className="h-14 bg-gray-80 px-[5%] flex items-center justify-between">
         <p className="text-xl tracking-wide text-blue font-semibold">
           CRYPTO SPY
         </p>
 
         <select
-          class="
+          className="
       appearance-none
       w-20
       text-center
@@ -19,10 +23,11 @@ const Header = () => {
       transition
       ease-in-out
       outline-none"
-          
+      value={currency}
+      onChange={(e) => setCurrency(e.target.value)}
         >
-          <option value={"INR"}>₹ INR</option>
           <option value={"USD"}>$ USD</option>
+          <option value={"INR"}>₹ INR</option>
         </select>
       </div>
     </>

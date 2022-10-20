@@ -1,9 +1,9 @@
-import './Home.css';
+import { useEffect, useState } from 'react';
+import axios from "axios";
 
 const Home = () => {
     return(
         <>
-        <p>Home</p>
         </>
     )
 }

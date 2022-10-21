@@ -16,7 +16,7 @@ const Header = () => {
       w-20
       text-center
       py-2
-      text-xl
+      text-lg
       font-normal
       bg-gray-100
       rounded

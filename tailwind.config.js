@@ -9,10 +9,9 @@ module.exports = {
         'white': "#ffffff",
         'red': "#E21717",
       },
-
-      padding: {
-        '5%': '5%',
-      }
+      backgroundImage: {
+        'hero-pattern': "url('../public/images/banner.jpg')"
+      },
     },
   },
   plugins: [],

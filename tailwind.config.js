@@ -8,6 +8,7 @@ module.exports = {
         'gray-100': '#101623',
         'white': "#ffffff",
         'red': "#E21717",
+        'green': '#4DD637',
       },
       backgroundImage: {
         'hero-pattern': "url('../public/images/banner.jpg')"

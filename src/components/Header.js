@@ -15,10 +15,10 @@ const Header = () => {
         <select
           className="
       appearance-none
-      w-20
+      w-[70px]
       text-center
-      py-2
-      text-lg
+      py-[5px]
+      text-[16px]
       font-normal
       bg-gray-100
       rounded

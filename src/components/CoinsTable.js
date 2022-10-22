@@ -29,11 +29,11 @@ const CoinsTable = () => {
 
   return (
     <>
-      <div className="w-[90%]  mx-auto mt-12 mb-5 h-12">
+      <div className="w-[90%] mx-auto my-5 h-12">
         <input
           type="text"
           placeholder="Search for a crypto currency"
-          className="w-full bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50 capitalize placeholder:uppercase"
+          className="w-full rounded bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50 capitalize placeholder:uppercase placeholder:text-[14px] placeholder:tracking-wide"
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
@@ -42,16 +42,16 @@ const CoinsTable = () => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="py-3 px-6 text-start text-xl">
+              <th scope="col" className="py-2 pl-3 pr-[48px] text-center text-lg font-semibold">
                 COIN
               </th>
-              <th scope="col" className="py-3 text-center px-6 text-xl">
+              <th scope="col" className="py-2 text-center px-[30px] text-lg font-semibold">
                 PRICE
               </th>
-              <th scope="col" className="py-3 text-center px-6 text-xl">
-                24H CHANGE
+              <th scope="col" className="py-2 text-center px-[30px] text-lg font-semibold">
+                CHANGE
               </th>
-              <th scope="col" className="py-3 text-center px-6 text-xl">
+              <th scope="col" className="py-2 text-center px-[30px] text-lg font-semibold">
                 VOLUME
               </th>
             </tr>
@@ -65,31 +65,31 @@ const CoinsTable = () => {
                   <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">
                     <td
                       scope="row"
-                      className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="py-4 pl-3 pr-9 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
                       <div className="flex gap-3 items-center justify-start">
-                        <img src={coinObj.image} className="h-[50px]" />
-                        <div className="flex flex-col">
-                          <p className="uppercase text-xl">{coinObj.symbol}</p>
+                        <img src={coinObj.image} className="h-[25px]" />
+                        <div className="flex flex-col gap-[1px]">
+                          <p className="uppercase text-[16px]">{coinObj.symbol}</p>
                           <p>{coinObj.name}</p>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 text-center text-[16px] font-semibold">
+                    <td className="py-4 text-center text-[15px] text-white">
                       {` ${symbol} ${numberWithCommas(coinObj.current_price)}`}
                     </td>
                     <td
                       className={
                         profit > 0
-                          ? "py-4 text-center text-[16px] text-green font-semibold"
-                          : "py-4 text-center text-[16px] text-red font-semibold"
-                      }
+                          ? "py-4 text-center text-[15px] text-green"
+                          : "py-4 text-center text-[15px] text-red"
+                      }    
                     >
                       {`${
                         profit > 0 ? `+${profit.toFixed(2)}` : profit.toFixed(2)
                       } %`}
                     </td>
-                    <td className="py-4 text-[16px] font-semibold text-center">
+                    <td className="py-4 text-[15px] text-center text-white">
                       <span>{symbol}</span>{" "}
                       {coinObj.market_cap.toString().slice(0, -6)}
                       <span>M</span>

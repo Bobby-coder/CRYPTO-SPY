@@ -29,6 +29,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(1);
+               window.scroll(0, 450);
             }}
           >
             1
@@ -38,6 +39,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(2);
+               window.scroll(0, 450);
             }}
           >
             2
@@ -47,6 +49,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(3);
+               window.scroll(0, 450);
             }}
           >
             3
@@ -56,6 +59,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(4);
+               window.scroll(0, 450);
             }}
           >
             4
@@ -65,6 +69,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(5);
+               window.scroll(0, 450);
             }}
           >
             5
@@ -74,6 +79,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(6);
+               window.scroll(0, 450);
             }}
           >
             6
@@ -83,6 +89,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(7);
+               window.scroll(0, 450);
             }}
           >
             7
@@ -92,6 +99,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(8);
+               window.scroll(0, 450);
             }}
           >
             8
@@ -101,6 +109,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(9);
+               window.scroll(0, 450);
             }}
           >
             9
@@ -110,6 +119,7 @@ const Pagination = () => {
             className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             onClick={() => {
               setPage(10);
+               window.scroll(0, 450);
             }}
           >
             10

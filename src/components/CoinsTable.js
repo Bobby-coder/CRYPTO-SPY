@@ -4,7 +4,7 @@ import { useCryptoState } from "./ContextProvider";
 import { numberWithCommas } from "./Slider";
 
 const CoinsTable = () => {
-  const { currency, symbol,page,setPage } = useCryptoState();
+  const { currency, symbol,page } = useCryptoState();
   const [tableCoins, setTableCoins] = useState([]);
   const [search, setSearch] = useState('')
 
@@ -22,9 +22,12 @@ const CoinsTable = () => {
   const handleSearch = () => {
     return tableCoins.filter(
         (coin) =>
-          coin.name.toLowerCase().includes(search) ||
-          coin.symbol.toLowerCase().includes(search)
-      )
+         {if (search === '') {
+           return tableCoins
+         } else {
+          return coin.name.toLowerCase().includes(search.trim())
+         }
+        })
   };
 
   return (
@@ -33,7 +36,7 @@ const CoinsTable = () => {
         <input
           type="text"
           placeholder="Search for a crypto currency"
-          className="w-full bg-transparent h-full uppercase border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50"
+          className="w-full bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50"
           onChange={(e) => setSearch(e.target.value) }
         />
         

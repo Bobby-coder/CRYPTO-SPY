@@ -36,7 +36,7 @@ const CoinsTable = () => {
         <input
           type="text"
           placeholder="Search for a crypto currency"
-          className="w-full bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50"
+          className="w-full bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50 capitalize placeholder:uppercase"
           onChange={(e) => setSearch(e.target.value) }
         />
         

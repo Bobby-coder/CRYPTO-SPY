@@ -29,11 +29,11 @@ const CoinsTable = () => {
 
   return (
     <>
-      <div className="w-[90%] mx-auto my-5 h-12">
+      <div className="w-[90%] mx-auto my-5 h-10">
         <input
           type="text"
           placeholder="Search for a crypto currency"
-          className="w-full rounded bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-5 hover:border-gray-50 capitalize placeholder:uppercase placeholder:text-[14px] placeholder:tracking-wide"
+          className="w-full text-[12px] rounded bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-2 hover:border-gray-50 capitalize placeholder:uppercase placeholder:text-[12px] placeholder:tracking-wide"
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
@@ -42,16 +42,16 @@ const CoinsTable = () => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="py-2 pl-3 pr-[48px] text-center text-lg font-semibold">
+              <th scope="col" className="py-2 pl-3 pr-[48px] text-center text-[14px] font-semibold">
                 COIN
               </th>
-              <th scope="col" className="py-2 text-center px-[30px] text-lg font-semibold">
+              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
                 PRICE
               </th>
-              <th scope="col" className="py-2 text-center px-[30px] text-lg font-semibold">
+              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
                 CHANGE
               </th>
-              <th scope="col" className="py-2 text-center px-[30px] text-lg font-semibold">
+              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
                 VOLUME
               </th>
             </tr>
@@ -70,26 +70,26 @@ const CoinsTable = () => {
                       <div className="flex gap-3 items-center justify-start">
                         <img src={coinObj.image} className="h-[25px]" />
                         <div className="flex flex-col gap-[1px]">
-                          <p className="uppercase text-[16px]">{coinObj.symbol}</p>
-                          <p>{coinObj.name}</p>
+                          <p className="uppercase text-[12px]">{coinObj.symbol}</p>
+                          <p className="text-[12px]" >{coinObj.name}</p>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 text-center text-[15px] text-white">
+                    <td className="py-4 text-center text-[12px] text-white">
                       {` ${symbol} ${numberWithCommas(coinObj.current_price)}`}
                     </td>
                     <td
                       className={
                         profit > 0
-                          ? "py-4 text-center text-[15px] text-green"
-                          : "py-4 text-center text-[15px] text-red"
+                          ? "py-4 text-center text-[12px] text-green"
+                          : "py-4 text-center text-[12px] text-red"
                       }    
                     >
                       {`${
                         profit > 0 ? `+${profit.toFixed(2)}` : profit.toFixed(2)
                       } %`}
                     </td>
-                    <td className="py-4 text-[15px] text-center text-white">
+                    <td className="py-4 text-[12px] text-center text-white">
                       <span>{symbol}</span>{" "}
                       {coinObj.market_cap.toString().slice(0, -6)}
                       <span>M</span>

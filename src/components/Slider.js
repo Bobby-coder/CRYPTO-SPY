@@ -28,15 +28,15 @@ const Slider = () => {
     return (
       <div className="flex flex-col items-center justify-between ">
         <Link to = 'coins/:id' >
-        <img src={coinObj.image} className="h-16 mb-3" />
+        <img src={coinObj.image} className="h-[50px] mb-3" />
         </Link>
-        <p className="text-center text-lg uppercase font-semibold">
+        <p className="text-center text-[14px] uppercase font-semibold">
           {coinObj.symbol} &nbsp;
           <span className={profit < 0 ? "text-red font-semibold" : "text-green font-semibold"}>
             {profit < 0 ? profit.toFixed(2) : `+${profit.toFixed(2)}`} %
           </span>
         </p>
-        <p className="text-center text-lg">
+        <p className="text-center text-[14px]">
           <span>{symbol}</span> {numberWithCommas(coinObj.current_price)}
         </p>
       </div>

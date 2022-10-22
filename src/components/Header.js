@@ -1,15 +1,17 @@
-import { CryptoState } from "./ContextProvider";
+import { Link } from "react-router-dom";
+import { useCryptoState } from "./ContextProvider";
 
 const Header = () => {
-  const { currency, setCurrency } = CryptoState();
+  const { currency, setCurrency } = useCryptoState();
 
   return (
     <>
       <div className="h-14 bg-gray-80 px-[5%] flex items-center justify-between">
+        <Link to= '/' >
         <p className="text-xl tracking-wide text-blue font-semibold">
           CRYPTO SPY
         </p>
-
+        </Link>
         <select
           className="
       appearance-none
@@ -22,7 +24,9 @@ const Header = () => {
       rounded
       transition
       ease-in-out
-      outline-none"
+      outline-none
+      cursor-pointer
+      "
       value={currency}
       onChange={(e) => setCurrency(e.target.value)}
         >

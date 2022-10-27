@@ -32,13 +32,14 @@ const CoinsTable = () => {
 
   return (
     <>
-      <div className="w-[90%] mx-auto my-5 h-10">
+      <div className="w-[90%] mx-auto my-5 h-10 relative flex items-center">
         <input
           type="text"
           placeholder="Search for a crypto currency"
           className="w-full text-[12px] rounded bg-transparent h-full border-solid border-gray-500 border-2 outline-none px-2 hover:border-gray-50 capitalize placeholder:uppercase placeholder:text-[12px] placeholder:tracking-wide"
           onChange={(e) => setSearch(e.target.value)}
         />
+         <svg className="svg-icon search-icon inline-block h-5 w-8 absolute right-1" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">A magnifying glass icon.</desc><g class="search-path" fill="none" stroke="#848F91"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
       </div>
 
       <div className="overflow-x-auto relative w-[90%] mx-auto">

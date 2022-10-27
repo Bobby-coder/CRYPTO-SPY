@@ -46,13 +46,13 @@ const CoinsTable = () => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="py-2 pl-3 pr-[48px] text-center text-[14px] font-semibold">
+              <th scope="col" className="py-2 pl-12 pr-[48px] text-[14px] font-semibold">
                 COIN
               </th>
-              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
+              <th scope="col" className="py-2 px-[30px] text-[14px] font-semibold sm:text-center">
                 PRICE
               </th>
-              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
+              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold hidden sm:table-cell">
                 CHANGE
               </th>
               <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold hidden sm:table-cell">
@@ -79,14 +79,14 @@ const CoinsTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 text-center text-[12px] text-white">
+                    <td className="py-4 pl-[30px] text-[12px] text-white sm:text-center sm:pl-0">
                       {` ${symbol} ${numberWithCommas(coinObj.current_price)}`}
                     </td>
                     <td
                       className={
                         profit > 0
-                          ? "py-4 text-center text-[12px] text-green"
-                          : "py-4 text-center text-[12px] text-red"
+                          ? "py-4 text-center text-[12px] text-green hidden sm:table-cell"
+                          : "py-4 text-center text-[12px] text-red hidden sm:table-cell"
                       }    
                     >
                       {`${

@@ -5,7 +5,7 @@ import { useCryptoState } from "./ContextProvider";
 import { Link } from "react-router-dom";
 
 export function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const Slider = () => {
@@ -26,10 +26,9 @@ const Slider = () => {
   const items = trendingCoins.map((coinObj) => {
     let profit = coinObj.price_change_percentage_24h;
     return (
+      <Link to = {`coins/${coinObj.id}`} >
       <div className="flex flex-col items-center justify-between ">
-        <Link to = 'coins/:id' >
         <img src={coinObj.image} className="h-[50px] mb-3" />
-        </Link>
         <p className="text-center text-[14px] uppercase font-semibold">
           {coinObj.symbol} &nbsp;
           <span className={profit < 0 ? "text-red font-semibold" : "text-green font-semibold"}>
@@ -40,6 +39,7 @@ const Slider = () => {
           <span>{symbol}</span> {numberWithCommas(coinObj.current_price)}
         </p>
       </div>
+      </Link>
     );
   });
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCryptoState } from "./ContextProvider";
 import { numberWithCommas } from "./Slider";
+import { useNavigate } from "react-router-dom";
 
 const CoinsTable = () => {
   const { currency, symbol, page } = useCryptoState();
@@ -18,6 +19,8 @@ const CoinsTable = () => {
   useEffect(() => {
     getTableCoins();
   }, [currency]);
+
+  const history = useNavigate();
 
   const handleSearch = () => {
     return tableCoins.filter(
@@ -51,7 +54,7 @@ const CoinsTable = () => {
               <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
                 CHANGE
               </th>
-              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold">
+              <th scope="col" className="py-2 text-center px-[30px] text-[14px] font-semibold hidden sm:table-cell">
                 VOLUME
               </th>
             </tr>
@@ -62,7 +65,7 @@ const CoinsTable = () => {
               .map((coinObj) => {
                 let profit = coinObj.price_change_percentage_24h;
                 return (
-                  <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                  <tr onClick={() => history(`coins/${coinObj.id}`)} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">
                     <td
                       scope="row"
                       className="py-4 pl-3 pr-9 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -89,7 +92,7 @@ const CoinsTable = () => {
                         profit > 0 ? `+${profit.toFixed(2)}` : profit.toFixed(2)
                       } %`}
                     </td>
-                    <td className="py-4 text-[12px] text-center text-white">
+                    <td className="py-4 text-[12px] text-center text-white hidden sm:table-cell">
                       <span>{symbol}</span>{" "}
                       {coinObj.market_cap.toString().slice(0, -6)}
                       <span>M</span>

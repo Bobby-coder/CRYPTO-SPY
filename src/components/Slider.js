@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
-import { useCryptoState } from "./ContextProvider";
+import { useCryptoState } from "../context/ContextProvider";
 import { Link } from "react-router-dom";
 
 export function numberWithCommas(x) {

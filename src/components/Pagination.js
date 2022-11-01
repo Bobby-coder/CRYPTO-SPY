@@ -1,4 +1,4 @@
-import { useCryptoState } from "./ContextProvider";
+import { useCryptoState } from "../context/ContextProvider";
 const Pagination = () => {
   const { page, setPage } = useCryptoState();
 

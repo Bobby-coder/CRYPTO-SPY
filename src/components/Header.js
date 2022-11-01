@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCryptoState } from "./ContextProvider";
+import { useCryptoState } from "../context/ContextProvider";
 
 const Header = () => {
   const { currency, setCurrency } = useCryptoState();
@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <div className="h-14 bg-gray-80 px-[5%] flex items-center justify-between">
         <Link to= '/' >
-        <p className="text-xl tracking-wide text-blue font-semibold">
+        <p className="text-[18px] tracking-wide text-blue font-semibold">
           CRYPTO SPY
         </p>
         </Link>

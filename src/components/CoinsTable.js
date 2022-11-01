@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useCryptoState } from "./ContextProvider";
+import { useCryptoState } from "../context/ContextProvider";
 import { numberWithCommas } from "./Slider";
 import { useNavigate } from "react-router-dom";
 

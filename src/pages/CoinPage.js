@@ -1,4 +1,4 @@
-import CoinInfo from "../components/CoinInfo";
+import CoinInfo from "../components/coinpage/CoinInfo";
 
 const CoinPage = () => {
     return(

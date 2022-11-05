@@ -1,6 +1,6 @@
-import Banner from '../components/Banner';
-import CoinsTable from '../components/CoinsTable';
-import Pagination from '../components/Pagination';
+import Banner from '../components/home/Banner';
+import CoinsTable from '../components/home/CoinsTable';
+import Pagination from '../components/home/Pagination';
 
 const Home = () => {
     return(

@@ -12,8 +12,8 @@ const CoinInfo = () => {
     const {currency, symbol} = useCryptoState();
 
     const coin = async () => {
-        const res = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}`)
-        setSingleCoin(res.data)
+        const {data} = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}`)
+        setSingleCoin(data)
     }
 
     useEffect(

@@ -14,10 +14,10 @@ const CoinGraph = () => {
   const { id } = useParams();
 
   const getGraphData = async () => {
-    const res = await axios.get(
+    const {data} = await axios.get(
       `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`
     );
-    setHistoricalData(res.data?.prices);
+    setHistoricalData(data.prices);
   };
 
   useEffect(() => {
@@ -26,10 +26,7 @@ const CoinGraph = () => {
 
   return (
     <>
-      {!historicalData ? (
-        <p>...Loading</p>
-      ) : (
-        <div className="w-full px-[2%]">
+      <div className="w-full px-[2%]">
         <Line
           data={{
             labels: historicalData.map((currEle) => {
@@ -58,7 +55,6 @@ const CoinGraph = () => {
           }}
         />
         </div>
-      )}
     </>
   );
 };

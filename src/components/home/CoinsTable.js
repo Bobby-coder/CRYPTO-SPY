@@ -67,7 +67,7 @@ const CoinsTable = () => {
               </th>
               <th
                 scope="col"
-                className="py-2 px-[30px] text-[14px] font-semibold sm:text-center lg:text-[18px]"
+                className="py-2 px-[30px] text-[14px] font-semibold text-center sm:text-center lg:text-[18px]"
               >
                 PRICE
               </th>
@@ -109,7 +109,7 @@ const CoinsTable = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 pl-[30px] text-[12px] text-white sm:text-center sm:pl-0 lg:text-[16px]">
+                    <td className="py-4 pl-[0px] text-[12px] text-white text-center sm:text-center sm:pl-0 lg:text-[16px]">
                       {` ${symbol} ${numberWithCommas(coinObj.current_price)}`}
                     </td>
                     <td

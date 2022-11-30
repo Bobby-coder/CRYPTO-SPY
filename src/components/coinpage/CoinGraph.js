@@ -26,7 +26,7 @@ const CoinGraph = () => {
 
   return (
     <>
-      <div className="w-full px-[2%]">
+      <div className="w-full px-[2%] xl:w-[75%] xl:px-[0]">
         <Line
           data={{
             labels: historicalData.map((currEle) => {

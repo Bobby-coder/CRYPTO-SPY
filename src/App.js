@@ -1,8 +1,7 @@
-import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Header';
-import Home from './pages/Home';
 import CoinPage from './pages/CoinPage';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element = {<Home />} />
+        <Route path='/' element = {<HomePage />} />
         <Route path='coins/:id' element = {<CoinPage />} />
       </Routes>
     </Router>

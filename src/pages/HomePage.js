@@ -2,7 +2,7 @@ import Banner from '../components/home/Banner';
 import CoinsTable from '../components/home/CoinsTable';
 import Pagination from '../components/home/Pagination';
 
-const Home = () => {
+const HomePage = () => {
     return(
         <>
         <Banner />
@@ -12,4 +12,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default HomePage;

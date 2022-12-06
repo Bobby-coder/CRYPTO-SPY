@@ -23,7 +23,6 @@ const CoinInfo = () => {
     )
     return(
         <>
-        <div className="flex flex-col gap-[30px] py-[20px] xl:flex-row">
         <div className="flex flex-col gap-2 w-full px-[2%] xl:w-[25%] xl:justify-around xl:border-[white] xl:border-solid xl:border-r-2 xl:px-[1%]">
             <img src={singleCoin.image?.large} className='h-32 self-center'/>
             <h1 className="text-center text-3xl font-semibold uppercase">{singleCoin.name}</h1>
@@ -31,8 +30,6 @@ const CoinInfo = () => {
             <p className="tracking-wide font-bold lg:text-[20px]">Rank: <span className="opacity-70 font-normal">{singleCoin.market_cap_rank}</span></p>
             <p className="tracking-wide font-bold lg:text-[20px]">Current Price: <span className="opacity-70 font-normal" >{symbol}{numberWithCommas(singleCoin.market_data?.current_price[currency.toLowerCase()])}</span></p>
             <p className="tracking-wide font-bold lg:text-[20px]">Market Cap: <span className="opacity-70 font-normal" >{numberWithCommas(singleCoin.market_data?.market_cap[currency.toLowerCase()].toString().slice(0, -6))}M</span></p>
-        </div>
-        <CoinGraph />
         </div>
         </>
     )

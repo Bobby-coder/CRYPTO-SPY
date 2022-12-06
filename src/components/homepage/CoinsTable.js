@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCryptoState } from "../../context/ContextProvider";
-import { numberWithCommas } from "../home/Slider";
+import { numberWithCommas } from "../homepage/Slider";
 import { useNavigate } from "react-router-dom";
 
 const CoinsTable = () => {

@@ -1,4 +1,4 @@
-import Slider from '../home/Slider';
+import Slider from '../homepage/Slider';
 
 const Banner = () => {
     return(

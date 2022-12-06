@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useCryptoState } from "../../context/ContextProvider";
-import { numberWithCommas } from "../home/Slider";
+import { numberWithCommas } from "../homepage/Slider";
 import parse from 'html-react-parser';
-import CoinGraph from "./CoinGraph";
 
 const CoinInfo = () => {
     const [singleCoin, setSingleCoin] = useState([])

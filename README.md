@@ -3,7 +3,7 @@
 ## Demo
 #### Here is a working live demo :  https://crypto-spy.netlify.app
 
-![Live-site-screenshot](screenshots/SS1.png)
+![Live-site-screenshot](public/images/SS1.png)
 
 ## Built with 
 

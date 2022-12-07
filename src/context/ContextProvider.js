@@ -6,6 +6,7 @@ const ContextProvider = ({children}) => {
     const [currency, setCurrency] = useState('INR')
     const [symbol, setSymbol] = useState('₹')
     const [page, setPage] = useState(1);
+    const [days, setDays] = useState(1);
 
     useEffect(
         () => {
@@ -15,7 +16,7 @@ const ContextProvider = ({children}) => {
     )
 
     return(
-        <cryptoContext.Provider value={{currency,setCurrency,symbol,page,setPage}}>{children}</cryptoContext.Provider>
+        <cryptoContext.Provider value={{currency,setCurrency,symbol,page,setPage,days,setDays}}>{children}</cryptoContext.Provider>
     )
 }
 

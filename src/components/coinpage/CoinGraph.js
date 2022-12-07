@@ -56,7 +56,7 @@ const CoinGraph = () => {
             },
           }}
         />
-        <div className="flex justify-between mt-3">
+        <div className="flex justify-between mt-3 gap-2">
           {
             graphDays.map(
               currEle => {

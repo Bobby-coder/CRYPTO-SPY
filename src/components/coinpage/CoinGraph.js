@@ -6,15 +6,15 @@ import { useParams } from "react-router-dom";
 import { Line } from "react-chartjs-2";
 import { CategoryScale } from "chart.js";
 import { Chart as ChartJS } from "chart.js/auto";
+import ChartButton from "./ChartButton";
 
 const CoinGraph = () => {
   const [historicalData, setHistoricalData] = useState([]);
-  const [days, setDays] = useState(1);
-  const { currency } = useCryptoState();
+  const { currency, days } = useCryptoState();
   const { id } = useParams();
 
   const getGraphData = async () => {
-    const {data} = await axios.get(
+    const { data } = await axios.get(
       `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currency}&days=${days}`
     );
     setHistoricalData(data.prices);
@@ -24,9 +24,11 @@ const CoinGraph = () => {
     getGraphData();
   }, [currency, days]);
 
+  const graphDays = [1, 30, 180, 365]
+
   return (
     <>
-      <div className="w-full px-[2%] xl:w-[75%] xl:px-[0]">
+      <div className="w-full flex-col px-[2%] xl:w-[75%] xl:px-[0] xl:pr-[20px]">
         <Line
           data={{
             labels: historicalData.map((currEle) => {
@@ -54,7 +56,18 @@ const CoinGraph = () => {
             },
           }}
         />
+        <div className="flex justify-between mt-3">
+          {
+            graphDays.map(
+              currEle => {
+                return(
+                  <ChartButton days = {currEle} /> 
+                )
+              }
+            )
+          }
         </div>
+      </div>
     </>
   );
 };

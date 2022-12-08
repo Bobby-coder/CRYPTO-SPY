@@ -1,6 +1,9 @@
 import { useCryptoState } from "../../context/ContextProvider";
 const Pagination = () => {
   const { page, setPage } = useCryptoState();
+  const paginationPreviousStyle = 'hidden cursor-pointer py-2 px-3 ml-0 leading-tight rounded-l-lg border bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white sm:block'
+  const paginationNumberStyle = 'cursor-pointer py-2 px-3 leading-tight border bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white'
+  const paginationNextStyle = 'hidden cursor-pointer py-2 px-3 leading-tight rounded-r-lg border bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white sm:block'
 
   return (
     <>
@@ -8,7 +11,7 @@ const Pagination = () => {
         <ul className="inline-flex items-center -space-x-px">
           <li
             onClick={() => (page > 1) && setPage(page - 1) (window.scroll(0, 450))}
-            className="hidden cursor-pointer py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white sm:block"
+            className={paginationPreviousStyle}
           >
             <svg
               aria-hidden="true"
@@ -26,7 +29,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(1);
                window.scroll(0, 450);
@@ -36,7 +39,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(2);
                window.scroll(0, 450);
@@ -46,7 +49,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(3);
                window.scroll(0, 450);
@@ -56,7 +59,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(4);
                window.scroll(0, 450);
@@ -66,7 +69,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(5);
                window.scroll(0, 450);
@@ -76,7 +79,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(6);
                window.scroll(0, 450);
@@ -86,7 +89,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(7);
                window.scroll(0, 450);
@@ -96,7 +99,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(8);
                window.scroll(0, 450);
@@ -106,7 +109,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(9);
                window.scroll(0, 450);
@@ -116,7 +119,7 @@ const Pagination = () => {
           </li>
 
           <li
-            className="cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={paginationNumberStyle}
             onClick={() => {
               setPage(10);
                window.scroll(0, 450);
@@ -125,7 +128,7 @@ const Pagination = () => {
             10
           </li>
 
-          <li onClick={() => (page < 10) && (setPage(page + 1) (window.scroll(0, 450)) )} className="hidden cursor-pointer py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white sm:block">
+          <li className={paginationNextStyle} onClick={() => (page < 10) && (setPage(page + 1) (window.scroll(0, 450)) )}>
             <svg
               aria-hidden="true"
               className="w-5 h-5"

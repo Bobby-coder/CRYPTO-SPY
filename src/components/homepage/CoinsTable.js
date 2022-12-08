@@ -56,8 +56,8 @@ const CoinsTable = () => {
       </div>
 
       <div className="overflow-x-auto relative w-[90%] mx-auto">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left">
+          <thead className="uppercase bg-gray-700 text-gray-400">
             <tr>
               <th
                 scope="col"
@@ -93,11 +93,11 @@ const CoinsTable = () => {
                 return (
                   <tr
                     onClick={() => history(`coins/${coinObj.id}`)}
-                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white"
+                    className="border-b bg-gray-800 border-gray-700 cursor-pointer hover:bg-gray-700 hover:text-white"
                   >
                     <td
                       scope="row"
-                      className="py-4 pl-3 pr-9 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="py-4 pl-3 pr-9 font-medium whitespace-nowrap text-white"
                     >
                       <div className="flex gap-3 items-center justify-start">
                         <img src={coinObj.image} className="h-[25px]" />

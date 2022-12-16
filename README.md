@@ -8,6 +8,6 @@
 
 ## Built with 
 
-- [React JS](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Chart JS](https://reactchartjs.github.io/react-chartjs-2/#/)
+- [React JS](https://reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Chart JS](https://reactchartjs.github.io/react-chartjs-2)
